@@ -1,10 +1,10 @@
-import FormLupaPassword from "../component/Fragments/FormLupaPassword";
+import FormForgotPassword from "../component/Fragments/ForgetPassword";
 import AuthLayout from "../component/Layouts/AuthLayout";
 
 const ForgotPass = () => {
   return (
     <AuthLayout type="forgot">
-      <FormLupaPassword />
+      <FormForgotPassword />
     </AuthLayout>
   );
 };

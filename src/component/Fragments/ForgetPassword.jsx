@@ -1,7 +1,7 @@
+import Button from "../Elements/Button";
 import LabeledInput from "../Elements/LabeledInput";
-import Button from "../Elements/button";
 
-const FormForgetPassword = () => {
+const FormForgotPassword = () => {
   return (
     <form action="">
       <div className="mb-6">
@@ -20,4 +20,4 @@ const FormForgetPassword = () => {
   );
 };
 
-export default FormForgetPassword;
+export default FormForgotPassword;
