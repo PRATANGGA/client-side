@@ -1,12 +1,16 @@
 import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
 import SignInPage from "./pages/signIn";
 import SignUpPage from "./pages/signUp";
+import DashboardPage from "./pages/dashboard";
+import ErrorRoute from "./pages/errorRoute";
+import BalancePage from "./pages/balance";
 
 const App = () => {
   const myRouter = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: <DashboardPage />,
+      errorElement: <ErrorRoute />,
     },
     {
       path: "/login",
@@ -15,6 +19,10 @@ const App = () => {
     {
       path: "/register",
       element: <SignUpPage />,
+    },
+    {
+      path: "/balance",
+      element: <BalancePage />,
     },
   ]);
 
