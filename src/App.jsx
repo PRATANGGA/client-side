@@ -1,17 +1,19 @@
 import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
 import SignInPage from "./pages/signIn";
 import SignUpPage from "./pages/signUp";
-import DashboardPage from "./pages/dashboard";
-import ErrorRoute from "./pages/errorRoute";
 import BalancePage from "./pages/balance";
 import ForgotPass from "./pages/forgotPass";
+import DashboardPage from "./pages/dashboard";
 
 const App = () => {
   const myRouter = createBrowserRouter([
     {
       path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/dashboard",
       element: <DashboardPage />,
-      errorElement: <ErrorRoute />,
     },
     {
       path: "/login",

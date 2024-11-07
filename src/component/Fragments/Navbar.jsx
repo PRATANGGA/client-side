@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Logo from "../Elements/Logo";
@@ -93,7 +94,7 @@ const Navbar = () => {
               <img src="images/profile.png" />
             </div>
             <div className="hidden sm:block">
-              <div className="text-white font-bold">Julang Tahta Pratangga</div>
+              <div className="text-white font-bold">HusainNaxJepara</div>
               <div className="text-xs">View Profile</div>
             </div>
             <div className="hidden sm:block self-center justify-self-end">
