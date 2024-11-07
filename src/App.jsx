@@ -4,16 +4,19 @@ import SignUpPage from "./pages/signUp";
 import BalancePage from "./pages/balance";
 import ForgotPass from "./pages/forgotPass";
 import DashboardPage from "./pages/dashboard";
+import ErrorRoute from "./pages/errorRoute";
 
 const App = () => {
   const myRouter = createBrowserRouter([
     {
       path: "/",
       element: <Home />,
+      errorElement: <ErrorRoute />,
     },
     {
       path: "/dashboard",
       element: <DashboardPage />,
+      errorElement: <ErrorRoute />,
     },
     {
       path: "/login",
