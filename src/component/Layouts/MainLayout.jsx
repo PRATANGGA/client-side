@@ -5,18 +5,16 @@ const MainLayout = (props) => {
   const { children } = props;
   return (
     <div className="flex bg-special-mainBg w-screen min-h-screen max-w-full">
-      {/* navbar start*/}
+      {/* Navbar Start */}
       <Navbar />
-      {/* navbar end*/}
+      {/* Navbar End */}
+
       <div className="w-screen">
-        {/* header start*/}
+        {/* Header Start */}
         <Header />
-        {/* header end*/}
-
-        {/* content start*/}
+        {/* Header End */}
+        {/* Content Start */}
         <main className="px-6 py-4">{children}</main>
-
-        {/* content end*/}
       </div>
     </div>
   );
