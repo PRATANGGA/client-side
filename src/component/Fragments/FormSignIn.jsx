@@ -1,14 +1,25 @@
-import Checkbox from "../Elements/Checkbox";
-import Button from "../Elements/Button";
+import { useNavigate } from "react-router-dom";
 import LabeledInput from "../Elements/LabeledInput";
-const FormSignIn = () => {
+import Button from "../Elements/Button";
+
+const LoginForm = () => {
+  const navigate = useNavigate(); // Inisialisasi useNavigate
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Mencegah perilaku default form
+    // Di sini, Anda dapat menambahkan logika untuk mendaftar jika diperlukan
+
+    // Mengarahkan ke halaman balance setelah pendaftaran berhasil
+    navigate("/balance");
+  };
+
   return (
-    <form action="">
+    <form onSubmit={handleSubmit}>
       <div className="mb-6">
         <LabeledInput
-          label="Email address"
+          label="Email Address"
           type="email"
-          placeholder="Enter your email address"
+          placeholder="hello@example.com"
           name="email"
         />
       </div>
@@ -16,15 +27,15 @@ const FormSignIn = () => {
         <LabeledInput
           label="Password"
           type="password"
-          placeholder="Enter your email password"
+          placeholder="*************"
           name="password"
         />
       </div>
-      <div className="mb-3">
-        <Checkbox label="Keep me signed in" name="status" />
-      </div>
-      <Button />
+      <Button variant="bg-[#299D91] w-full text-white" type="submit">
+        Login
+      </Button>
     </form>
   );
 };
-export default FormSignIn;
+
+export default LoginForm;
